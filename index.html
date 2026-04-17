@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+
+<h1>My Visualizations</h1>
+
+<h2>Visualization 1: UFO Sightings Over Time</h2>
+
+<div id="vis1"></div>
+
+
+<h3>Writeup</h3>
+<p>
+I am visualizing the sightings of UFOs plotted against the year in which they were seen. I've used line marks and made the color green to better match the UFO theme. I was unable to get the years to line up nicely to the data, I think because some of the years were missing from the data. I've transformed the data by removing the most recent year since its data is incomplete, along with dropping NA values from the dataset. Additionally, I've recast the year column to be a date type.
+</p>
+
+<h2>Visualization 2</h2>
+<div id="vis2"></div>
+
+<h3>Writeup</h3>
+<p>
+
+</p>
+
+<h3>Links</h3>
+<ul>
+  <li><a href="./workbook.ipynb">workbook</a></li>
+  <li><a href="https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized-00.csv">source</a></li>
+</ul>
+
+<script>
+vegaEmbed('#vis1', './lchart.json');
+vegaEmbed('#vis2', './bchart.json');
+</script>
+
+
+</body>
+</html>
