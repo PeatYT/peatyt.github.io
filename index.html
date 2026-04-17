@@ -25,12 +25,14 @@ I am visualizing the sightings of UFOs plotted against the year in which they we
 
 <h3>Writeup</h3>
 <p>
+This visualization id of the shapes of UFOs and their frequency, sorted via interactivity by state. The color is still green to be UFO themed. This visualization required additional data cleaning to be tolerant of errors, with dropping of NA values in the state column to avoid null states available in the dropdown.
 
+This is the plot that contains interactivity. For interactivity, I've made a dropdown that lets the viewer select a state and dynamically changes the available columns and values to match the choice. The visualization changes corresponding to the choice, with both the column sizes and the presence of columns adapting to what is present in the chosen state's data. I've chosen not to limit the dropdown to US states, instead leaving it global since it lets users see the difference across multiple countries if they were interested in such information.
 </p>
 
 <h3>Links</h3>
 <ul>
-  <li><a href="./workbook.ipynb">workbook</a></li>
+  <li><a href="https://github.com/PeatYT/peatyt.github.io/blob/main/workbook.ipynb">workbook</a></li>
   <li><a href="https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized-00.csv">source</a></li>
 </ul>
 
