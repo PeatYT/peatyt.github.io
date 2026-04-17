@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+
+<h1>My Visualizations</h1>
+
+<h2>Visualization 1: UFO Sightings Over Time</h2>
+
+<div id="vis1"></div>
+
+
+<h3>Writeup</h3>
+<p>
+I am visualizing the sightings of UFOs plotted against the year in which they were seen. I've used line marks and made the color green to better match the UFO theme. I was unable to get the years to line up nicely to the data, I think because some of the years were missing from the data. I've transformed the data by removing the most recent year since its data is incomplete, along with dropping NA values from the dataset. Additionally, I've recast the year column to be a date type. I've chosen to encode my data with a simple line chart since I wanted to show that the amount of reported sightings has gone up over time, which is massively correlated with the rise of the internet. I chose not to add interactivity here since there's not much to dissect with the sighting increase over time.
+</p>
+
+<h2>Visualization 2: UFO Shape by State</h2>
+<div id="vis2"></div>
+
+<h3>Writeup</h3>
+<p>
+This visualization id of the shapes of UFOs and their frequency, sorted via interactivity by state. The color is still green to be UFO themed. This visualization required additional data cleaning to be tolerant of errors, with dropping of NA values in the state column to avoid null states available in the dropdown. Despite ordering by "-y" which seemed to be the consensus on stackoverflow, this chart didn't end up sorting the bars nicely. I'll look into why that is for my next Altair visualization, but it's an interesting quirk.
+
+This is the plot that contains interactivity. For interactivity, I've made a dropdown that lets the viewer select a state and dynamically changes the available columns and values to match the choice. The visualization changes corresponding to the choice, with both the column sizes and the presence of columns adapting to what is present in the chosen state's data. I've chosen not to limit the dropdown to US states, instead leaving it global since it lets users see the difference across multiple countries if they were interested in such information.
+</p>
+
+<h3>Links</h3>
+<ul>
+  <li><a href="https://github.com/PeatYT/peatyt.github.io/blob/main/workbook.ipynb">workbook</a></li>
+  <li><a href="https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized-00.csv">data</a></li>
+</ul>
+
+<script>
+vegaEmbed('#vis1', './lchart.json');
+vegaEmbed('#vis2', './bchart.json');
+</script>
+
+
+</body>
+</html>
